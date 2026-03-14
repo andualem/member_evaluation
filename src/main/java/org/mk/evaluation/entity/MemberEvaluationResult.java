@@ -19,9 +19,10 @@ public class MemberEvaluationResult {
     @JoinColumn(name = "member_id")
     private Member member;
 
+
     @ManyToOne
-    @JoinColumn(name = "evaluation_round_id")
-    private EvaluationRound evaluationRound;
+    @JoinColumn(name = "evaluation_id")
+    private MemberEvaluation evaluation;
 
     private int rank;
 
@@ -36,14 +37,14 @@ public class MemberEvaluationResult {
     @LastModifiedBy
     private long lastModifiedBy;
 
-
-    public EvaluationRound getEvaluationRound() {
-        return evaluationRound;
+    public MemberEvaluation getEvaluation() {
+        return evaluation;
     }
 
-    public void setEvaluationRound(EvaluationRound evaluationRound) {
-        this.evaluationRound = evaluationRound;
+    public void setEvaluation(MemberEvaluation evaluation) {
+        this.evaluation = evaluation;
     }
+
 
     public Member getMember() {
         return member;

@@ -24,6 +24,10 @@ public class MemberEvaluation {
     @JoinColumn(name = "evaluation_round_id")
     private EvaluationRound evaluationRound;
 
+    @ManyToOne
+    @JoinColumn(name = "evaluator_id")
+    private Member evaluator;
+
     //Participation related
     private boolean prayerParticipation;
     private boolean mainCenterParticipation;
@@ -70,6 +74,14 @@ public class MemberEvaluation {
     private long lastModifiedDate;
     @LastModifiedBy
     private long lastModifiedBy;
+
+    public Member getEvaluator() {
+        return evaluator;
+    }
+
+    public void setEvaluator(Member evaluator) {
+        this.evaluator = evaluator;
+    }
 
     public EvaluationRound getEvaluationRound() {
         return evaluationRound;

@@ -24,6 +24,8 @@ public class MemberAddress {
     private long startDate;
     private long endDate;
 
+    private boolean isCurrentAddress;
+
     @CreatedBy
     private long createdBy;
     @LastModifiedDate
@@ -69,5 +71,13 @@ public class MemberAddress {
 
     public void setEndDate(long endDate) {
         this.endDate = endDate;
+    }
+
+    public boolean isCurrentAddress() {
+        return isCurrentAddress;
+    }
+
+    public void setCurrentAddress(boolean currentAddress) {
+        isCurrentAddress = currentAddress;
     }
 }
