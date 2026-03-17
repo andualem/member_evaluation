@@ -6,6 +6,9 @@ import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.util.Date;
 
 @Entity
 @EntityListeners(AuditingEntityListener.class)
@@ -21,10 +24,13 @@ public class MemberAddress {
     @ManyToOne
     @JoinColumn(name = "address_id")
     private Address address;
-    private long startDate;
-    private long endDate;
 
-    private boolean isCurrentAddress;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date startDate;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date endDate;
+
+    private Boolean isCurrentAddress;
 
     @CreatedBy
     private long createdBy;
@@ -57,27 +63,27 @@ public class MemberAddress {
         this.id = id;
     }
 
-    public long getStartDate() {
+    public Date getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(long startDate) {
+    public void setStartDate(Date startDate) {
         this.startDate = startDate;
     }
 
-    public long getEndDate() {
+    public Date getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(long endDate) {
+    public void setEndDate(Date endDate) {
         this.endDate = endDate;
     }
 
-    public boolean isCurrentAddress() {
+    public Boolean getCurrentAddress() {
         return isCurrentAddress;
     }
 
-    public void setCurrentAddress(boolean currentAddress) {
+    public void setCurrentAddress(Boolean currentAddress) {
         isCurrentAddress = currentAddress;
     }
 }

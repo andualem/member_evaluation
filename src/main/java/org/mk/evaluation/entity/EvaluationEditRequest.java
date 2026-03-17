@@ -17,24 +17,24 @@ public class EvaluationEditRequest {
 
     @ManyToOne
     @JoinColumn(name = "member_evaluation_id")
-    private MemberEvaluation memberEvaluation;
+    private Evaluation evaluation;
 
     @ManyToOne
     @JoinColumn(name = "edit_requestor_id")
     private Member editRequestor;
 
-    private long requestDate;
+    private Long requestDate;
 
     private String reason;
 
-    private int requestStatus; // requested - 1, rejected - 2, approved - 3
+    private Integer requestStatus; // requested - 1, rejected - 2, approved - 3
 
     @CreatedBy
-    private long createdBy;
+    private Long createdBy;
     @LastModifiedDate
-    private long lastModifiedDate;
+    private Long lastModifiedDate;
     @LastModifiedBy
-    private long lastModifiedBy;
+    private Long lastModifiedBy;
 
     public Member getEditRequestor() {
         return editRequestor;
@@ -44,12 +44,12 @@ public class EvaluationEditRequest {
         this.editRequestor = editRequestor;
     }
 
-    public MemberEvaluation getMemberEvaluation() {
-        return memberEvaluation;
+    public Evaluation getMemberEvaluation() {
+        return evaluation;
     }
 
-    public void setMemberEvaluation(MemberEvaluation memberEvaluation) {
-        this.memberEvaluation = memberEvaluation;
+    public void setMemberEvaluation(Evaluation evaluation) {
+        this.evaluation = evaluation;
     }
 
     public Long getId() {
@@ -60,11 +60,11 @@ public class EvaluationEditRequest {
         this.id = id;
     }
 
-    public long getRequestDate() {
+    public Long getRequestDate() {
         return requestDate;
     }
 
-    public void setRequestDate(long requestDate) {
+    public void setRequestDate(Long requestDate) {
         this.requestDate = requestDate;
     }
 
@@ -76,11 +76,11 @@ public class EvaluationEditRequest {
         this.reason = reason;
     }
 
-    public int getRequestStatus() {
+    public Integer getRequestStatus() {
         return requestStatus;
     }
 
-    public void setRequestStatus(int requestStatus) {
+    public void setRequestStatus(Integer requestStatus) {
         this.requestStatus = requestStatus;
     }
 }

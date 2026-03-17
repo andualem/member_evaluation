@@ -8,8 +8,8 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 @Entity
 @EntityListeners(AuditingEntityListener.class)
-@Table(name = "MemberEvaluationResult")
-public class MemberEvaluationResult {
+@Table(name = "EvaluationResult")
+public class EvaluationResult {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -22,11 +22,13 @@ public class MemberEvaluationResult {
 
     @ManyToOne
     @JoinColumn(name = "evaluation_id")
-    private MemberEvaluation evaluation;
+    private Evaluation evaluation;
 
-    private int rank;
+    private Integer grade;
 
-    private String rankDescription;
+    private Double totalScore;
+
+    private String gradeClassification;
 
     private String remarks;
 
@@ -37,11 +39,11 @@ public class MemberEvaluationResult {
     @LastModifiedBy
     private long lastModifiedBy;
 
-    public MemberEvaluation getEvaluation() {
+    public Evaluation getEvaluation() {
         return evaluation;
     }
 
-    public void setEvaluation(MemberEvaluation evaluation) {
+    public void setEvaluation(Evaluation evaluation) {
         this.evaluation = evaluation;
     }
 
@@ -62,20 +64,28 @@ public class MemberEvaluationResult {
         this.id = id;
     }
 
-    public int getRank() {
-        return rank;
+    public Integer getGrade() {
+        return grade;
     }
 
-    public void setRank(int rank) {
-        this.rank = rank;
+    public void setGrade(Integer grade) {
+        this.grade = grade;
     }
 
-    public String getRankDescription() {
-        return rankDescription;
+    public Double getTotalScore() {
+        return totalScore;
     }
 
-    public void setRankDescription(String rankDescription) {
-        this.rankDescription = rankDescription;
+    public void setTotalScore(Double totalScore) {
+        this.totalScore = totalScore;
+    }
+
+    public String getGradeClassification() {
+        return gradeClassification;
+    }
+
+    public void setGradeClassification(String gradeClassification) {
+        this.gradeClassification = gradeClassification;
     }
 
     public String getRemarks() {
@@ -85,4 +95,6 @@ public class MemberEvaluationResult {
     public void setRemarks(String remarks) {
         this.remarks = remarks;
     }
+
+
 }

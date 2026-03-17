@@ -9,8 +9,8 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 @Entity
 @EntityListeners(AuditingEntityListener.class)
-@Table(name = "MemberEvaluation")
-public class MemberEvaluation {
+@Table(name = "Evaluation")
+public class Evaluation {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -29,44 +29,44 @@ public class MemberEvaluation {
     private Member evaluator;
 
     //Participation related
-    private boolean prayerParticipation;
-    private boolean mainCenterParticipation;
-    private boolean mainDepartmentParticipation;
-    private boolean woredaCenterParticipation;
-    private boolean subCenterParticipation;
-    private boolean departmentParticipation;
+    private Boolean prayerParticipation;
+    private Boolean mainCenterParticipation;
+    private Boolean mainDepartmentParticipation;
+    private Boolean woredaCenterParticipation;
+    private Boolean subCenterParticipation;
+    private Boolean departmentParticipation;
 
     //Responsibility related
-    private boolean mainCenterResponsibility;
-    private boolean mainDepartmentResponsibility;
-    private boolean woredaCenterResponsibility;
-    private boolean subCenterResponsibility;
-    private boolean departmentResponsibility;
+    private Boolean mainCenterResponsibility;
+    private Boolean mainDepartmentResponsibility;
+    private Boolean woredaCenterResponsibility;
+    private Boolean subCenterResponsibility;
+    private Boolean departmentResponsibility;
 
     //Committee Responsibility related
-    private boolean mainCenterCommitteeResponsibility;
-    private boolean mainDepartmentCommitteeResponsibility;
-    private boolean woredaCenterCommitteeResponsibility;
-    private boolean subCenterCommitteeResponsibility;
-    private boolean departmentCommitteeResponsibility;
+    private Boolean mainCenterCommitteeResponsibility;
+    private Boolean mainDepartmentCommitteeResponsibility;
+    private Boolean woredaCenterCommitteeResponsibility;
+    private Boolean subCenterCommitteeResponsibility;
+    private Boolean departmentCommitteeResponsibility;
 
     //Self motivation
-    private boolean VoluntaryInOtherDepartment;
-    private boolean VoluntaryInSelfDepartment;
+    private Boolean VoluntaryInOtherDepartment;
+    private Boolean VoluntaryInSelfDepartment;
 
     //Attendance
-    private boolean mainCenterAttendance;
-    private boolean mainDepartmentAttendance;
-    private boolean woredaCenterAttendance;
-    private boolean subCenterAttendance;
-    private boolean departmentAttendance;
+    private Boolean mainCenterAttendance;
+    private Boolean mainDepartmentAttendance;
+    private Boolean woredaCenterAttendance;
+    private Boolean subCenterAttendance;
+    private Boolean departmentAttendance;
 
     //General Assembly Meeting attendance
-    private boolean mainCenterGAAttendance;
-    private boolean woredaCenterGAAttendance;
+    private Boolean mainCenterGAAttendance;
+    private Boolean woredaCenterGAAttendance;
 
     //Contribution
-    private boolean contributeMonthly;
+    private Boolean contributeMonthly;
 
     @CreatedBy
     private long createdBy;
@@ -107,211 +107,211 @@ public class MemberEvaluation {
         this.id = id;
     }
 
-    public boolean isPrayerParticipation() {
+    public Boolean isPrayerParticipation() {
         return prayerParticipation;
     }
 
-    public void setPrayerParticipation(boolean prayerParticipation) {
+    public void setPrayerParticipation(Boolean prayerParticipation) {
         this.prayerParticipation = prayerParticipation;
     }
 
-    public boolean isMainCenterParticipation() {
+    public Boolean isMainCenterParticipation() {
         return mainCenterParticipation;
     }
 
-    public void setMainCenterParticipation(boolean mainCenterParticipation) {
+    public void setMainCenterParticipation(Boolean mainCenterParticipation) {
         this.mainCenterParticipation = mainCenterParticipation;
     }
 
-    public boolean isMainDepartmentParticipation() {
+    public Boolean isMainDepartmentParticipation() {
         return mainDepartmentParticipation;
     }
 
-    public void setMainDepartmentParticipation(boolean mainDepartmentParticipation) {
+    public void setMainDepartmentParticipation(Boolean mainDepartmentParticipation) {
         this.mainDepartmentParticipation = mainDepartmentParticipation;
     }
 
-    public boolean isWoredaCenterParticipation() {
+    public Boolean isWoredaCenterParticipation() {
         return woredaCenterParticipation;
     }
 
-    public void setWoredaCenterParticipation(boolean woredaCenterParticipation) {
+    public void setWoredaCenterParticipation(Boolean woredaCenterParticipation) {
         this.woredaCenterParticipation = woredaCenterParticipation;
     }
 
-    public boolean isSubCenterParticipation() {
+    public Boolean isSubCenterParticipation() {
         return subCenterParticipation;
     }
 
-    public void setSubCenterParticipation(boolean subCenterParticipation) {
+    public void setSubCenterParticipation(Boolean subCenterParticipation) {
         this.subCenterParticipation = subCenterParticipation;
     }
 
-    public boolean isDepartmentParticipation() {
+    public Boolean isDepartmentParticipation() {
         return departmentParticipation;
     }
 
-    public void setDepartmentParticipation(boolean departmentParticipation) {
+    public void setDepartmentParticipation(Boolean departmentParticipation) {
         this.departmentParticipation = departmentParticipation;
     }
 
-    public boolean isMainCenterResponsibility() {
+    public Boolean isMainCenterResponsibility() {
         return mainCenterResponsibility;
     }
 
-    public void setMainCenterResponsibility(boolean mainCenterResponsibility) {
+    public void setMainCenterResponsibility(Boolean mainCenterResponsibility) {
         this.mainCenterResponsibility = mainCenterResponsibility;
     }
 
-    public boolean isMainDepartmentResponsibility() {
+    public Boolean isMainDepartmentResponsibility() {
         return mainDepartmentResponsibility;
     }
 
-    public void setMainDepartmentResponsibility(boolean mainDepartmentResponsibility) {
+    public void setMainDepartmentResponsibility(Boolean mainDepartmentResponsibility) {
         this.mainDepartmentResponsibility = mainDepartmentResponsibility;
     }
 
-    public boolean isWoredaCenterResponsibility() {
+    public Boolean isWoredaCenterResponsibility() {
         return woredaCenterResponsibility;
     }
 
-    public void setWoredaCenterResponsibility(boolean woredaCenterResponsibility) {
+    public void setWoredaCenterResponsibility(Boolean woredaCenterResponsibility) {
         this.woredaCenterResponsibility = woredaCenterResponsibility;
     }
 
-    public boolean isSubCenterResponsibility() {
+    public Boolean isSubCenterResponsibility() {
         return subCenterResponsibility;
     }
 
-    public void setSubCenterResponsibility(boolean subCenterResponsibility) {
+    public void setSubCenterResponsibility(Boolean subCenterResponsibility) {
         this.subCenterResponsibility = subCenterResponsibility;
     }
 
-    public boolean isDepartmentResponsibility() {
+    public Boolean isDepartmentResponsibility() {
         return departmentResponsibility;
     }
 
-    public void setDepartmentResponsibility(boolean departmentResponsibility) {
+    public void setDepartmentResponsibility(Boolean departmentResponsibility) {
         this.departmentResponsibility = departmentResponsibility;
     }
 
-    public boolean isMainCenterCommitteeResponsibility() {
+    public Boolean isMainCenterCommitteeResponsibility() {
         return mainCenterCommitteeResponsibility;
     }
 
-    public void setMainCenterCommitteeResponsibility(boolean mainCenterCommitteeResponsibility) {
+    public void setMainCenterCommitteeResponsibility(Boolean mainCenterCommitteeResponsibility) {
         this.mainCenterCommitteeResponsibility = mainCenterCommitteeResponsibility;
     }
 
-    public boolean isMainDepartmentCommitteeResponsibility() {
+    public Boolean isMainDepartmentCommitteeResponsibility() {
         return mainDepartmentCommitteeResponsibility;
     }
 
-    public void setMainDepartmentCommitteeResponsibility(boolean mainDepartmentCommitteeResponsibility) {
+    public void setMainDepartmentCommitteeResponsibility(Boolean mainDepartmentCommitteeResponsibility) {
         this.mainDepartmentCommitteeResponsibility = mainDepartmentCommitteeResponsibility;
     }
 
-    public boolean isWoredaCenterCommitteeResponsibility() {
+    public Boolean isWoredaCenterCommitteeResponsibility() {
         return woredaCenterCommitteeResponsibility;
     }
 
-    public void setWoredaCenterCommitteeResponsibility(boolean woredaCenterCommitteeResponsibility) {
+    public void setWoredaCenterCommitteeResponsibility(Boolean woredaCenterCommitteeResponsibility) {
         this.woredaCenterCommitteeResponsibility = woredaCenterCommitteeResponsibility;
     }
 
-    public boolean isSubCenterCommitteeResponsibility() {
+    public Boolean isSubCenterCommitteeResponsibility() {
         return subCenterCommitteeResponsibility;
     }
 
-    public void setSubCenterCommitteeResponsibility(boolean subCenterCommitteeResponsibility) {
+    public void setSubCenterCommitteeResponsibility(Boolean subCenterCommitteeResponsibility) {
         this.subCenterCommitteeResponsibility = subCenterCommitteeResponsibility;
     }
 
-    public boolean isDepartmentCommitteeResponsibility() {
+    public Boolean isDepartmentCommitteeResponsibility() {
         return departmentCommitteeResponsibility;
     }
 
-    public void setDepartmentCommitteeResponsibility(boolean departmentCommitteeResponsibility) {
+    public void setDepartmentCommitteeResponsibility(Boolean departmentCommitteeResponsibility) {
         this.departmentCommitteeResponsibility = departmentCommitteeResponsibility;
     }
 
-    public boolean isVoluntaryInOtherDepartment() {
+    public Boolean isVoluntaryInOtherDepartment() {
         return VoluntaryInOtherDepartment;
     }
 
-    public void setVoluntaryInOtherDepartment(boolean voluntaryInOtherDepartment) {
+    public void setVoluntaryInOtherDepartment(Boolean voluntaryInOtherDepartment) {
         VoluntaryInOtherDepartment = voluntaryInOtherDepartment;
     }
 
-    public boolean isVoluntaryInSelfDepartment() {
+    public Boolean isVoluntaryInSelfDepartment() {
         return VoluntaryInSelfDepartment;
     }
 
-    public void setVoluntaryInSelfDepartment(boolean voluntaryInSelfDepartment) {
+    public void setVoluntaryInSelfDepartment(Boolean voluntaryInSelfDepartment) {
         VoluntaryInSelfDepartment = voluntaryInSelfDepartment;
     }
 
-    public boolean isMainCenterAttendance() {
+    public Boolean isMainCenterAttendance() {
         return mainCenterAttendance;
     }
 
-    public void setMainCenterAttendance(boolean mainCenterAttendance) {
+    public void setMainCenterAttendance(Boolean mainCenterAttendance) {
         this.mainCenterAttendance = mainCenterAttendance;
     }
 
-    public boolean isMainDepartmentAttendance() {
+    public Boolean isMainDepartmentAttendance() {
         return mainDepartmentAttendance;
     }
 
-    public void setMainDepartmentAttendance(boolean mainDepartmentAttendance) {
+    public void setMainDepartmentAttendance(Boolean mainDepartmentAttendance) {
         this.mainDepartmentAttendance = mainDepartmentAttendance;
     }
 
-    public boolean isWoredaCenterAttendance() {
+    public Boolean isWoredaCenterAttendance() {
         return woredaCenterAttendance;
     }
 
-    public void setWoredaCenterAttendance(boolean woredaCenterAttendance) {
+    public void setWoredaCenterAttendance(Boolean woredaCenterAttendance) {
         this.woredaCenterAttendance = woredaCenterAttendance;
     }
 
-    public boolean isSubCenterAttendance() {
+    public Boolean isSubCenterAttendance() {
         return subCenterAttendance;
     }
 
-    public void setSubCenterAttendance(boolean subCenterAttendance) {
+    public void setSubCenterAttendance(Boolean subCenterAttendance) {
         this.subCenterAttendance = subCenterAttendance;
     }
 
-    public boolean isDepartmentAttendance() {
+    public Boolean isDepartmentAttendance() {
         return departmentAttendance;
     }
 
-    public void setDepartmentAttendance(boolean departmentAttendance) {
+    public void setDepartmentAttendance(Boolean departmentAttendance) {
         this.departmentAttendance = departmentAttendance;
     }
 
-    public boolean isMainCenterGAAttendance() {
+    public Boolean isMainCenterGAAttendance() {
         return mainCenterGAAttendance;
     }
 
-    public void setMainCenterGAAttendance(boolean mainCenterGAAttendance) {
+    public void setMainCenterGAAttendance(Boolean mainCenterGAAttendance) {
         this.mainCenterGAAttendance = mainCenterGAAttendance;
     }
 
-    public boolean isWoredaCenterGAAttendance() {
+    public Boolean isWoredaCenterGAAttendance() {
         return woredaCenterGAAttendance;
     }
 
-    public void setWoredaCenterGAAttendance(boolean woredaCenterGAAttendance) {
+    public void setWoredaCenterGAAttendance(Boolean woredaCenterGAAttendance) {
         this.woredaCenterGAAttendance = woredaCenterGAAttendance;
     }
 
-    public boolean isContributeMonthly() {
+    public Boolean isContributeMonthly() {
         return contributeMonthly;
     }
 
-    public void setContributeMonthly(boolean contributeMonthly) {
+    public void setContributeMonthly(Boolean contributeMonthly) {
         this.contributeMonthly = contributeMonthly;
     }
 }
